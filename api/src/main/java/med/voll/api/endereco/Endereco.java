@@ -4,6 +4,7 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.endereco.dto.DadosEndereco;
 
 @Embeddable
 @Getter
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Endereco {
 
-    private String logadouro;
+    private String logradouro;
     private String bairro;
     private String cep;
     private String numero;
@@ -20,7 +21,7 @@ public class Endereco {
     private String uf;
 
     public Endereco(DadosEndereco endereco) {
-        this.logadouro = endereco.logadouro();
+        this.logradouro = endereco.logradouro();
         this.bairro = endereco.bairro();
         this.cep = endereco.cep();
         this.numero = endereco.numero();
