@@ -18,8 +18,9 @@ public class MedicoController {
     private final MedicosService service;
 
     @PostMapping
-    @Transactional
     public void cadstrar(@RequestBody @Valid DadosCadastroMedico dados){
         service.cadastrar(dados);
     }
+
+
 }
