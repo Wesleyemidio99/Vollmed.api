@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import med.voll.api.medico.Medico;
 import med.voll.api.medico.dto.DadosCadastroMedico;
 import med.voll.api.medico.MedicosRepository;
+import med.voll.api.services.MedicosService;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,11 +15,11 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class MedicoController {
 
-    private final MedicosRepository repository;
+    private final MedicosService service;
 
     @PostMapping
     @Transactional
     public void cadstrar(@RequestBody @Valid DadosCadastroMedico dados){
-        repository.save(new Medico(dados));
+        service.cadastrar(dados);
     }
 }
