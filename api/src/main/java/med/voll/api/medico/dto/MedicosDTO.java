@@ -8,14 +8,12 @@ import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import med.voll.api.endereco.dto.DadosEndereco;
 
-import java.util.Objects;
-
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode
 @RequiredArgsConstructor
-public class DadosCadastroMedico {
+public class MedicosDTO {
 
     @NotBlank
     private final String nome;

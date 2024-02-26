@@ -3,7 +3,6 @@ package med.voll.api.medico;
 import jakarta.persistence.*;
 import lombok.*;
 import med.voll.api.endereco.Endereco;
-import med.voll.api.medico.dto.DadosCadastroMedico;
 import med.voll.api.medico.dto.Especialidade;
 import org.hibernate.proxy.HibernateProxy;
 
