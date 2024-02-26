@@ -13,9 +13,9 @@ import org.springframework.validation.annotation.Validated;
 public class MedicosService {
 
     private final MedicosRepository repository;
-    private final MedicoMapper medicoMapper;
+    private final MedicoMapper mapper;
 
     public void cadastrar(DadosCadastroMedico cadastroMedico){
-        repository.save(medicoMapper.toEntity(cadastroMedico));
+        repository.save(mapper.toEntity(cadastroMedico));
     }
 }
