@@ -1,7 +1,7 @@
 package med.voll.api.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import med.voll.api.paciente.DadosCadastroPaciente;
+import med.voll.api.paciente.dto.PacienteDto;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PacienteController {
 
     @PostMapping
-    public void cadastrar(@RequestBody DadosCadastroPaciente dados){
+    public void cadastrar(@RequestBody PacienteDto dados){
         log.info("Dados recebidos do paciente: {}", dados);
     }
 }
