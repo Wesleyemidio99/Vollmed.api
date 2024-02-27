@@ -4,7 +4,7 @@ import med.voll.api.paciente.Paciente;
 import med.voll.api.paciente.dto.PacienteDto;
 import org.mapstruct.*;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
+@Mapper(uses = {EnderecoMapper.class}, unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
 public interface PacienteMapper {
     Paciente toEntity(PacienteDto pacienteDto);
 
