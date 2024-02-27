@@ -4,11 +4,10 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import med.voll.api.endereco.dto.DadosEndereco;
+import med.voll.api.endereco.dto.EnderecoDto;
 
 
 @Getter
@@ -31,6 +30,6 @@ public class PacienteDto {
 
     @Valid
     @NotNull
-    private final DadosEndereco endereco;
+    private final EnderecoDto endereco;
 
 }

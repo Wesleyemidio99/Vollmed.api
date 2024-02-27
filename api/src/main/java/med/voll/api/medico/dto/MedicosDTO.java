@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
-import med.voll.api.endereco.dto.DadosEndereco;
+import med.voll.api.endereco.dto.EnderecoDto;
 
 @Getter
 @Setter
@@ -34,6 +34,6 @@ public class MedicosDTO {
 
     @Valid
     @NotNull
-    private final DadosEndereco endereco;
+    private final EnderecoDto endereco;
 
 }

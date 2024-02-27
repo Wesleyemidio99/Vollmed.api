@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @RequiredArgsConstructor
-public class DadosEndereco {
+public class EnderecoDto {
 
     @NotBlank
     private final String logradouro;
