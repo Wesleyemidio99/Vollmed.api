@@ -8,14 +8,14 @@ import med.voll.api.services.MedicosService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("medicos")
+@RequestMapping("/medicos")
 @RequiredArgsConstructor
 public class MedicoController {
 
     private final MedicosService service;
 
     @PostMapping
-    public void cadstrar(@RequestBody @Valid MedicosDTO dados){
+    public void cadastrar(@RequestBody @Valid MedicosDTO dados){
         service.cadastrar(dados);
     }
 
