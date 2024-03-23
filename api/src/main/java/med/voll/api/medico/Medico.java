@@ -18,14 +18,19 @@ public class Medico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
+    @Column
     private String nome;
 
+    @Column
     private String email;
 
+    @Column
     private String telefone;
 
+    @Column
     private String crm;
 
     @Enumerated(EnumType.STRING)
