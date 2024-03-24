@@ -27,9 +27,6 @@ public class Paciente {
     @Embedded
     private Endereco endereco;
 
-    @Column(name = "data_nascimento")
-    private LocalDate dataNascimento;
-
 
     @Override
     public final boolean equals(Object o) {
