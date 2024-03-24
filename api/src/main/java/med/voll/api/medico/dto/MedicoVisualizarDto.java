@@ -12,4 +12,8 @@ import java.io.Serializable;
 public class MedicoVisualizarDto implements Serializable {
     Long id;
     String nome;
+    String email;
+    String crm;
+    Especialidade especialidade;
+
 }
