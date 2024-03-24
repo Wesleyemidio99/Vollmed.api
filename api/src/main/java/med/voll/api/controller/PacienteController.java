@@ -3,12 +3,11 @@ package med.voll.api.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import med.voll.api.paciente.dto.PacienteDto;
-import med.voll.api.repository.PacienteRepository;
+import med.voll.api.paciente.dto.PacienteVisualizarDto;
 import med.voll.api.services.PacienteService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -20,5 +19,10 @@ public class PacienteController {
     @PostMapping
     public void cadastrar(@RequestBody @Valid PacienteDto dados){
         service.cadastrar(dados);
+    }
+
+    @GetMapping
+    public List<PacienteVisualizarDto> listarPaciente(){
+        return service.listarPaciente();
     }
 }
